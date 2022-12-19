@@ -13,7 +13,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  height: 90%;
+  height: 85%;
   transform: translate(-50%, -50%);
   display: flex;
   background-color: var(--color-white);
@@ -48,11 +48,11 @@
   text-align: center;
 }
 .Content input {
-  width: 90%;
+  width: 76%;
   border: 1px solid rgb(116, 109, 109);
   padding: 1rem;
   border-radius: 0.5rem;
-  margin: 1rem auto;
+  margin: 1rem;
 }
 
 .btnContainer {

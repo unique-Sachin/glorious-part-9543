@@ -1,0 +1,55 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalContainer {
+  max-width: 30rem;
+  width: 100%;
+  height: 50%;
+  position: fixed;
+  top: 10%;
+  right: 2%;
+  background-color: var(--color-white);
+  color: black;
+}
+.cartHeading {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+.cartHeadingIcon {
+  font-size: 2rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.buyBtn button {
+  padding: 1rem;
+  width: 70%;
+  margin: auto;
+  background-color: var(--color-logo);
+  color: var(--color-white);
+  border-radius: 0.5rem;
+}
+.buyBtn {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  height: 65%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.content img{
+  width: 30%;
+  border-radius: 50%;
+}

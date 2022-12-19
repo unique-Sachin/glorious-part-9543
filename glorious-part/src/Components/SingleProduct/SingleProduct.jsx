@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import styles from "./singleproduct.module.css";
 import { AiOutlineClose } from "react-icons/ai";
 import axios from "axios";
-// import { State } from "../Navbar/Navbar";
+import Checkout from "../../pages/Checkout/Checkout";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const SingleProduct = ({
   open,
@@ -11,6 +12,9 @@ const SingleProduct = ({
   setCartState,
   cartState,
 }) => {
+  const [closeCheckout, setOpenModal] = useState(false);
+  const { loginWithRedirect, logout, user, isAuthenticated, isLoading } =
+    useAuth0();
   if (!open) return null;
   const {
     image,
@@ -24,16 +28,31 @@ const SingleProduct = ({
   } = singleData;
 
   const HandleAddCart = () => {
-    alert("Item has been added to Cart");
-    axios
-      .post(`https://be-fit.onrender.com/cart`, {
-        ...singleData,
-      })
-      .then((res) => setCartState(cartState + 1));
-    closeModal();
+    if (isAuthenticated) {
+      alert("Item has been added to Cart");
+      axios
+        .post(`https://be-fit.onrender.com/cart`, {
+          ...singleData,
+        })
+        .then((res) => setCartState(cartState + 1));
+      closeModal();
+    } else {
+      alert("Login First to Continue Shopping");
+      loginWithRedirect();
+    }
   };
 
-  const HandleBuyNow = () => {};
+  const HandleBuyNow = () => {
+    if (isAuthenticated) {
+      setOpenModal(true);
+    } else {
+      alert("Login First to Continue Shopping");
+      loginWithRedirect();
+    }
+  };
+  const closePayment = () => {
+    setOpenModal(false);
+  };
 
   return (
     <div onClick={closeModal} className={styles.overlay}>
@@ -69,6 +88,11 @@ const SingleProduct = ({
           </div>
         </div>
       </div>
+      <Checkout
+        open={closeCheckout}
+        singleData={singleData}
+        closeModal={closePayment}
+      />
     </div>
   );
 };

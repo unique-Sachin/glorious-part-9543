@@ -7,6 +7,8 @@ import Checkout from "../Checkout/Checkout";
 
 const Cart = ({ open, cartData, closeModal, setDeleteCount }) => {
   const [closeCheckout, setOpenModal] = useState(false);
+  const [totalAmount, setTotalAmount] = useState(0);
+
   const HandleBuyNow = () => {
     setOpenModal(true);
   };
@@ -64,6 +66,7 @@ const Cart = ({ open, cartData, closeModal, setDeleteCount }) => {
         open={closeCheckout}
         singleData={cartData}
         closeModal={closePayment}
+        closePrevModal={closeModal}
       />
     </div>
   );

@@ -3,11 +3,11 @@ import styles from "./Checkout.module.css";
 import { AiOutlineClose } from "react-icons/ai";
 import Payment from "../Payment/Payment";
 
-const Checkout = ({ open, singleData, closeModal }) => {
+const Checkout = ({ open, singleData, closeModal, closePrevModal }) => {
   const [openChackout, setOpenCheckout] = useState(false);
+  const [mobile, setMobile] = useState("");
   const [credentials, setCredentials] = useState({
     email: "",
-    mobile: "",
     name: "",
     pin: "",
     address: "",
@@ -18,7 +18,6 @@ const Checkout = ({ open, singleData, closeModal }) => {
   const HandlePayment = () => {
     if (
       credentials.email ||
-      credentials.mobile ||
       credentials.name ||
       credentials.pin ||
       credentials.address == ""
@@ -32,6 +31,8 @@ const Checkout = ({ open, singleData, closeModal }) => {
   const closePayment = () => {
     setOpenCheckout(false);
   };
+
+  console.log(mobile);
 
   return (
     <div onClick={closeModal} className={styles.overlay}>
@@ -55,12 +56,8 @@ const Checkout = ({ open, singleData, closeModal }) => {
                 placeholder="Full Name"
               />
               <input
-                onChange={(e) =>
-                  setCredentials({
-                    mobile: e.target.value,
-                  })
-                }
-                value={credentials.mobile}
+                onChange={(e) => setMobile(e.target.value)}
+                value={mobile}
                 type="text"
                 placeholder="Mobile Number"
               />
@@ -107,8 +104,10 @@ const Checkout = ({ open, singleData, closeModal }) => {
       </div>
       <Payment
         open={openChackout}
-        singleData={credentials.mobile}
+        singleData={mobile}
         closeModal={closePayment}
+        closePrevModal={closeModal}
+        closePrevPrevModal={closePrevModal}
       />
     </div>
   );
