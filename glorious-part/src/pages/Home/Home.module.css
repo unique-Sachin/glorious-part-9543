@@ -1,0 +1,219 @@
+.container {
+  width: 100%;
+}
+.hero_container {
+  margin-top: -6rem;
+  position: relative;
+  height: 100vh;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.hero_content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  margin-top: -3rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+.hero_content img {
+  width: 35rem;
+  margin-bottom: 5rem;
+}
+.hero_content h1 {
+  font-size: 2.7rem;
+  width: 40%;
+}
+.hero_content button {
+  font-size: 1.5rem;
+  color: orangered;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background-color: var(--color-white);
+  margin: 2.5rem 0;
+}
+.hero_content button:hover {
+  color: var(--color-bg);
+}
+.hero_icons {
+  font-size: 3.5rem;
+}
+
+.plans_container {
+  display: flex;
+  justify-content: center;
+  gap: 2.2rem;
+  padding: 50px 0;
+}
+
+.plans_container > div {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid var(--color-light);
+  border-radius: 1rem;
+  transition: var(--transition);
+  background-color: var(--color-bg-varient);
+  cursor: pointer;
+  padding: 1rem;
+}
+.plans_container > div:hover {
+  background-color: var(--color-primary);
+}
+.plans_container span {
+  font-size: 3.2rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+.plans_container p {
+  font-size: 1.4rem;
+  color: var(--color-light);
+  width: 65%;
+  margin: auto;
+}
+.card_type1_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  position: relative;
+  text-align: center;
+}
+
+.card_type1_container > img {
+  width: 70%;
+  margin: auto;
+  height: 100%;
+  border-radius: 3rem;
+}
+.card_type1_heading {
+  font-size: 7rem;
+  position: absolute;
+  top: 30%;
+  width: 60%;
+  left: 20%;
+}
+.card_type2_container {
+  margin: 5rem;
+  position: relative;
+  text-align: center;
+}
+.card_type2_container > div {
+  display: flex;
+  width: 75%;
+  justify-content: center;
+  margin: 0.5rem auto;
+  gap: 0.2rem;
+}
+
+.card_type2_container img {
+  width: 23%;
+  border-radius: 1.5rem;
+}
+
+.bepass_container {
+  height: 100vh;
+  text-align: center;
+}
+.bepass_container > button {
+  background-color: var(--color-bg);
+  color: #3886f3;
+  font-weight: 700;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1rem;
+  transition: var(--transition);
+}
+.bepass_container > button:hover {
+  background-color: var(--color-bg-varient);
+}
+.bepass_heading {
+  font-size: 6rem;
+}
+
+.bepass_cards {
+  display: flex;
+  justify-content: space-evenly;
+  width: 85%;
+  margin: 5rem auto;
+}
+.bepass_cards > div {
+  width: 30%;
+  position: relative;
+  text-align: left;
+}
+
+.bepass_cards > div > img {
+  width: 100%;
+  padding: 0;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.bepass_cards > div > img:hover ~ .bepass_plans,
+.bepass_cards > div > img:hover {
+  transform: scale(1.05);
+}
+.bepass_cards > div > h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.bepass_cards > div > ul {
+  list-style-position: inside;
+  font-size: 1.7rem;
+  color: var(--color-light);
+  padding: 1rem;
+  line-height: 3.5rem;
+}
+
+.bepass_plans {
+  width: fit-content;
+  text-align: left;
+  position: absolute;
+  top: 28%;
+  left: 5%;
+  transition: var(--transition);
+}
+
+.bepass_plans img {
+  width: 10rem;
+}
+
+.bepass_plans_btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+.bepass_plans_btn > button {
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  margin: 2.5rem 0;
+  transition: var(--transition);
+}
+
+.bepass_plans_btn > button:nth-child(1) {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.bepass_plans_btn > button:nth-child(2) {
+  color: orangered;
+  background-color: var(--color-white);
+}
+.bepass_plans_btn > button:nth-child(1):hover {
+  background-color: var(--color-btn-hover);
+}
+
+.bepass_plans_btn > button:nth-child(2):hover {
+  color: var(--color-bg);
+}

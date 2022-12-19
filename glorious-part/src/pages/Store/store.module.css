@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+.products_container {
+  width: 85%;
+  margin: auto;
+}
+.category_heading {
+  display: flex;
+  align-items: flex-end;
+  width: max-content;
+  margin: 1rem 0;
+}
+.category_heading > h2 {
+  font-size: 3rem;
+  margin: 0 1rem;
+  font-style: italic;
+}
+
+.category_heading p {
+  font-size: 1.6rem;
+  margin: 0 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-logo);
+}

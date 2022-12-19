@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  margin-top: 2px;
+  width: 100%;
+  background-color: transparent;
+}
+.container > div {
+  display: flex;
+  z-index: 10;
+}
+.logo_container {
+  flex: 1;
+}
+.logo_container > img {
+  width: 15rem;
+  cursor: pointer;
+}
+.menubar_container {
+  flex: 1.5;
+  justify-content: flex-start;
+  align-items: center;
+}
+.account_container {
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+.menubar_container h2 {
+  font-size: 1.9rem;
+  color: var(--color-light);
+  margin: 0 3rem;
+}
+
+.menubar_container h2:hover {
+  color: var(--color-white);
+}
+.navbar_icons {
+  font-size: 2.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: var(--transition);
+  margin: 0 1rem;
+}
+
+.navbar_icons:hover {
+  background-color: var(--color-primary);
+}
+
+.account_container > button {
+  background-color: transparent;
+  color: var(--color-white);
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0 1rem;
+  padding: 1rem 1.8rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid;
+  transition: var(--transition);
+}
+.account_container > button:hover {
+  border-color: var(--color-light);
+}
+
+/*======================== MEDIA QUERIES (MEDIUM DEVICES) ========================*/
+
+@media screen and (max-width: 1024px) {
+}
+
+/*======================== MEDIA QUERIES (SMALL DEVICES) ========================*/
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .menubar_container,
+  .logo_container,
+  .account_container {
+    justify-content: space-evenly;
+    padding: 5px;
+  }
+}
