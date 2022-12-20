@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Product_slider.module.css";
 
 const Product_slider = ({

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./store.module.css";
 import axios from "../../Axios";
 import Slider from "react-slick";
-import Product_slider from "./Product_slider";
+import ProductSlider from "./ProductSlider";
 import { NavLink } from "react-router-dom";
 import SingleProduct from "../../Components/SingleProduct/SingleProduct";
 import Loader from "../../Components/LOADER/Loader";
@@ -56,7 +56,7 @@ const Store = ({ setCartState, cartState }) => {
         </div>
         <Slider {...settings}>
           {tshirt.map((el, id) => (
-            <Product_slider
+            <ProductSlider
               key={id}
               image={el.image}
               title={el.title}
@@ -82,7 +82,7 @@ const Store = ({ setCartState, cartState }) => {
         </div>
         <Slider {...settings}>
           {cycle.map((el, id) => (
-            <Product_slider
+            <ProductSlider
               key={id}
               image={el.image}
               title={el.title}
@@ -108,7 +108,7 @@ const Store = ({ setCartState, cartState }) => {
         </div>
         <Slider {...settings}>
           {spinbikes.map((el, id) => (
-            <Product_slider
+            <ProductSlider
               key={id}
               image={el.image}
               title={el.title}
@@ -134,7 +134,7 @@ const Store = ({ setCartState, cartState }) => {
         </div>
         <Slider {...settings}>
           {treadmills.map((el, id) => (
-            <Product_slider
+            <ProductSlider
               key={id}
               image={el.image}
               title={el.title}
@@ -160,7 +160,7 @@ const Store = ({ setCartState, cartState }) => {
         </div>
         <Slider {...settings}>
           {accessories.map((el, id) => (
-            <Product_slider
+            <ProductSlider
               key={id}
               image={el.image}
               title={el.title}
