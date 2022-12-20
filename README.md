@@ -16,3 +16,6 @@
 # CHECKOUT
 ![BE FIT CHEKOUT](https://user-images.githubusercontent.com/112638599/208610166-5f082445-1c4b-4bdf-b20b-88ef07772578.jpg)
 
+# BUILD WITH
+## React.JS (FrontEnd)
+## JsonServer (Backend)
