@@ -40,151 +40,301 @@ const Store = ({ setCartState, cartState }) => {
     slidesToShow: 3.5,
     slidesToScroll: 3,
   };
+  const settings2 = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   const closeModal = () => {
     setOpenModal(false);
   };
   return loading ? (
     <Loader />
   ) : (
-    <div className={styles.container}>
-      <div className={styles.products_container}>
-        <div className={styles.category_heading}>
-          <h2>T-SHIRTS</h2>
-          <NavLink to={"/tshirt"}>
-            <p>VIEW MORE</p>
-          </NavLink>
+    <div>
+      <div className={styles.container}>
+        <div className={styles.products_container}>
+          <div className={styles.category_heading}>
+            <h2>T-SHIRTS</h2>
+            <NavLink to={"/tshirt"}>
+              <p>VIEW MORE</p>
+            </NavLink>
+          </div>
+          <Slider {...settings}>
+            {tshirt.map((el, id) => (
+              <ProductSlider
+                key={id}
+                image={el.image}
+                title={el.title}
+                category={el.category}
+                validity={el.validity}
+                offer_price={el.offer_price}
+                original_price={el.original_price}
+                discount={el.discount}
+                newid={id}
+                data={tshirt}
+                setsingleData={setsingleData}
+                setOpenModal={setOpenModal}
+              />
+            ))}
+          </Slider>
         </div>
-        <Slider {...settings}>
-          {tshirt.map((el, id) => (
-            <ProductSlider
-              key={id}
-              image={el.image}
-              title={el.title}
-              category={el.category}
-              validity={el.validity}
-              offer_price={el.offer_price}
-              original_price={el.original_price}
-              discount={el.discount}
-              newid={id}
-              data={tshirt}
-              setsingleData={setsingleData}
-              setOpenModal={setOpenModal}
-            />
-          ))}
-        </Slider>
-      </div>
-      <div className={styles.products_container}>
-        <div className={styles.category_heading}>
-          <h2>CYCLES</h2>
-          <NavLink to={"/cycles"}>
-            <p>VIEW MORE</p>
-          </NavLink>
+        <div className={styles.products_container}>
+          <div className={styles.category_heading}>
+            <h2>CYCLES</h2>
+            <NavLink to={"/cycles"}>
+              <p>VIEW MORE</p>
+            </NavLink>
+          </div>
+          <Slider {...settings}>
+            {cycle.map((el, id) => (
+              <ProductSlider
+                key={id}
+                image={el.image}
+                title={el.title}
+                category={el.category}
+                validity={el.validity}
+                offer_price={el.offer_price}
+                original_price={el.original_price}
+                discount={el.discount}
+                newid={id}
+                data={cycle}
+                setsingleData={setsingleData}
+                setOpenModal={setOpenModal}
+              />
+            ))}
+          </Slider>
         </div>
-        <Slider {...settings}>
-          {cycle.map((el, id) => (
-            <ProductSlider
-              key={id}
-              image={el.image}
-              title={el.title}
-              category={el.category}
-              validity={el.validity}
-              offer_price={el.offer_price}
-              original_price={el.original_price}
-              discount={el.discount}
-              newid={id}
-              data={cycle}
-              setsingleData={setsingleData}
-              setOpenModal={setOpenModal}
-            />
-          ))}
-        </Slider>
-      </div>
-      <div className={styles.products_container}>
-        <div className={styles.category_heading}>
-          <h2>SPINBIKES</h2>
-          <NavLink to={"/spinbikes"}>
-            <p>VIEW MORE</p>
-          </NavLink>
+        <div className={styles.products_container}>
+          <div className={styles.category_heading}>
+            <h2>SPINBIKES</h2>
+            <NavLink to={"/spinbikes"}>
+              <p>VIEW MORE</p>
+            </NavLink>
+          </div>
+          <Slider {...settings}>
+            {spinbikes.map((el, id) => (
+              <ProductSlider
+                key={id}
+                image={el.image}
+                title={el.title}
+                category={el.category}
+                validity={el.validity}
+                offer_price={el.offer_price}
+                original_price={el.original_price}
+                discount={el.discount}
+                newid={id}
+                data={spinbikes}
+                setsingleData={setsingleData}
+                setOpenModal={setOpenModal}
+              />
+            ))}
+          </Slider>
         </div>
-        <Slider {...settings}>
-          {spinbikes.map((el, id) => (
-            <ProductSlider
-              key={id}
-              image={el.image}
-              title={el.title}
-              category={el.category}
-              validity={el.validity}
-              offer_price={el.offer_price}
-              original_price={el.original_price}
-              discount={el.discount}
-              newid={id}
-              data={spinbikes}
-              setsingleData={setsingleData}
-              setOpenModal={setOpenModal}
-            />
-          ))}
-        </Slider>
-      </div>
-      <div className={styles.products_container}>
-        <div className={styles.category_heading}>
-          <h2>TREADMILLS</h2>
-          <NavLink to={"/treadmills"}>
-            <p>VIEW MORE</p>
-          </NavLink>
+        <div className={styles.products_container}>
+          <div className={styles.category_heading}>
+            <h2>TREADMILLS</h2>
+            <NavLink to={"/treadmills"}>
+              <p>VIEW MORE</p>
+            </NavLink>
+          </div>
+          <Slider {...settings}>
+            {treadmills.map((el, id) => (
+              <ProductSlider
+                key={id}
+                image={el.image}
+                title={el.title}
+                category={el.category}
+                validity={el.validity}
+                offer_price={el.offer_price}
+                original_price={el.original_price}
+                discount={el.discount}
+                newid={id}
+                data={treadmills}
+                setsingleData={setsingleData}
+                setOpenModal={setOpenModal}
+              />
+            ))}
+          </Slider>
         </div>
-        <Slider {...settings}>
-          {treadmills.map((el, id) => (
-            <ProductSlider
-              key={id}
-              image={el.image}
-              title={el.title}
-              category={el.category}
-              validity={el.validity}
-              offer_price={el.offer_price}
-              original_price={el.original_price}
-              discount={el.discount}
-              newid={id}
-              data={treadmills}
-              setsingleData={setsingleData}
-              setOpenModal={setOpenModal}
-            />
-          ))}
-        </Slider>
-      </div>
-      <div className={styles.products_container}>
-        <div className={styles.category_heading}>
-          <h2>ACCESSORIES</h2>
-          <NavLink to={"/accessories"}>
-            <p>VIEW MORE</p>
-          </NavLink>
+        <div className={styles.products_container}>
+          <div className={styles.category_heading}>
+            <h2>ACCESSORIES</h2>
+            <NavLink to={"/accessories"}>
+              <p>VIEW MORE</p>
+            </NavLink>
+          </div>
+          <Slider {...settings}>
+            {accessories.map((el, id) => (
+              <ProductSlider
+                key={id}
+                image={el.image}
+                title={el.title}
+                category={el.category}
+                validity={el.validity}
+                offer_price={el.offer_price}
+                original_price={el.original_price}
+                discount={el.discount}
+                newid={id}
+                data={accessories}
+                setsingleData={setsingleData}
+                setOpenModal={setOpenModal}
+              />
+            ))}
+          </Slider>
         </div>
-        <Slider {...settings}>
-          {accessories.map((el, id) => (
-            <ProductSlider
-              key={id}
-              image={el.image}
-              title={el.title}
-              category={el.category}
-              validity={el.validity}
-              offer_price={el.offer_price}
-              original_price={el.original_price}
-              discount={el.discount}
-              newid={id}
-              data={accessories}
-              setsingleData={setsingleData}
-              setOpenModal={setOpenModal}
-            />
-          ))}
-        </Slider>
+        <SingleProduct
+          open={openModal}
+          singleData={singleData}
+          closeModal={closeModal}
+          setCartState={setCartState}
+          cartState={cartState}
+        />
       </div>
-      <SingleProduct
-        open={openModal}
-        singleData={singleData}
-        closeModal={closeModal}
-        setCartState={setCartState}
-        cartState={cartState}
-      />
+      <div className={styles.container_mobile}>
+        <div className={styles.products_container}>
+          <div className={styles.category_heading}>
+            <h2>T-SHIRTS</h2>
+            <NavLink to={"/tshirt"}>
+              <p>VIEW MORE</p>
+            </NavLink>
+          </div>
+          <Slider {...settings2}>
+            {tshirt.map((el, id) => (
+              <ProductSlider
+                key={id}
+                image={el.image}
+                title={el.title}
+                category={el.category}
+                validity={el.validity}
+                offer_price={el.offer_price}
+                original_price={el.original_price}
+                discount={el.discount}
+                newid={id}
+                data={tshirt}
+                setsingleData={setsingleData}
+                setOpenModal={setOpenModal}
+              />
+            ))}
+          </Slider>
+        </div>
+        <div className={styles.products_container}>
+          <div className={styles.category_heading}>
+            <h2>CYCLES</h2>
+            <NavLink to={"/cycles"}>
+              <p>VIEW MORE</p>
+            </NavLink>
+          </div>
+          <Slider {...settings2}>
+            {cycle.map((el, id) => (
+              <ProductSlider
+                key={id}
+                image={el.image}
+                title={el.title}
+                category={el.category}
+                validity={el.validity}
+                offer_price={el.offer_price}
+                original_price={el.original_price}
+                discount={el.discount}
+                newid={id}
+                data={cycle}
+                setsingleData={setsingleData}
+                setOpenModal={setOpenModal}
+              />
+            ))}
+          </Slider>
+        </div>
+        <div className={styles.products_container}>
+          <div className={styles.category_heading}>
+            <h2>SPINBIKES</h2>
+            <NavLink to={"/spinbikes"}>
+              <p>VIEW MORE</p>
+            </NavLink>
+          </div>
+          <Slider {...settings2}>
+            {spinbikes.map((el, id) => (
+              <ProductSlider
+                key={id}
+                image={el.image}
+                title={el.title}
+                category={el.category}
+                validity={el.validity}
+                offer_price={el.offer_price}
+                original_price={el.original_price}
+                discount={el.discount}
+                newid={id}
+                data={spinbikes}
+                setsingleData={setsingleData}
+                setOpenModal={setOpenModal}
+              />
+            ))}
+          </Slider>
+        </div>
+        <div className={styles.products_container}>
+          <div className={styles.category_heading}>
+            <h2>TREADMILLS</h2>
+            <NavLink to={"/treadmills"}>
+              <p>VIEW MORE</p>
+            </NavLink>
+          </div>
+          <Slider {...settings2}>
+            {treadmills.map((el, id) => (
+              <ProductSlider
+                key={id}
+                image={el.image}
+                title={el.title}
+                category={el.category}
+                validity={el.validity}
+                offer_price={el.offer_price}
+                original_price={el.original_price}
+                discount={el.discount}
+                newid={id}
+                data={treadmills}
+                setsingleData={setsingleData}
+                setOpenModal={setOpenModal}
+              />
+            ))}
+          </Slider>
+        </div>
+        <div className={styles.products_container}>
+          <div className={styles.category_heading}>
+            <h2>ACCESSORIES</h2>
+            <NavLink to={"/accessories"}>
+              <p>VIEW MORE</p>
+            </NavLink>
+          </div>
+          <Slider {...settings2}>
+            {accessories.map((el, id) => (
+              <ProductSlider
+                key={id}
+                image={el.image}
+                title={el.title}
+                category={el.category}
+                validity={el.validity}
+                offer_price={el.offer_price}
+                original_price={el.original_price}
+                discount={el.discount}
+                newid={id}
+                data={accessories}
+                setsingleData={setsingleData}
+                setOpenModal={setOpenModal}
+              />
+            ))}
+          </Slider>
+        </div>
+        <SingleProduct
+          open={openModal}
+          singleData={singleData}
+          closeModal={closeModal}
+          setCartState={setCartState}
+          cartState={cartState}
+        />
+      </div>
     </div>
+
+    // for mobile view
   );
 };
 

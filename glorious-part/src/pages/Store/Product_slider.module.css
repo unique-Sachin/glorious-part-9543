@@ -31,6 +31,14 @@
   color: var(--color-logo);
 }
 
-.product_details p{
-    text-decoration: line-through;
+.product_details p {
+  text-decoration: line-through;
+}
+
+/*======================== MEDIA QUERIES (SMALL DEVICES) ========================*/
+
+@media screen and (max-width: 600px) {
+  .container {
+    align-items: center;
+  }
 }
