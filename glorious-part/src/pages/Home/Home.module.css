@@ -216,3 +216,40 @@ video {
 .bepass_plans_btn > button:nth-child(2):hover {
   color: var(--color-bg);
 }
+/*======================== MEDIA QUERIES (MEDIUM DEVICES) ========================*/
+
+@media screen and (max-width: 1024px) {
+}
+
+/*======================== MEDIA QUERIES (SMALL DEVICES) ========================*/
+
+@media screen and (max-width: 600px) {
+  .hero_content img {
+    width: 20rem;
+    margin-bottom: 5rem;
+  }
+  .hero_content h1 {
+    font-size: 2.7rem;
+    width: 80%;
+  }
+  .card_type1_container {
+    display: block;
+  }
+  .card_type1_heading {
+    font-size: 3rem;
+  }
+  .plans_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+  }
+  .plans_container > div {
+    width: 70%;
+    margin: 2rem;
+    flex-direction: column;
+  }
+  .card_type2_container > div {
+    width: 95%;
+  }
+}

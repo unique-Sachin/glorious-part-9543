@@ -80,12 +80,19 @@
 
 @media screen and (max-width: 600px) {
   .container {
-    flex-direction: column;
+    /* flex-direction: column; */
+    overflow: hidden;
   }
-  .menubar_container,
+  /* .menubar_container, */
   .logo_container,
   .account_container {
     justify-content: space-evenly;
-    padding: 5px;
+  }
+  .menubar_container h2 {
+    /* display: none; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 10rem;
   }
 }
