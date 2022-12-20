@@ -8,6 +8,8 @@
 # STORE
 ![befit store](https://user-images.githubusercontent.com/112638599/208608327-587421e0-94b2-4b35-96b1-7ccd7ac39437.jpg)
 
+# CART
+![befit cart](https://user-images.githubusercontent.com/112638599/208609355-9fd9cb32-14e5-4b47-b305-5e81077f317a.jpg)
 
 
 ## Available Scripts
