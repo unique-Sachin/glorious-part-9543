@@ -1,10 +1,12 @@
 # BeFit.com
-
-![befit hero](https://user-images.githubusercontent.com/112638599/208607315-21d84fd8-cb20-42f4-9729-13f3243a73f7.jpg)
 # Be the Part of Be.Fit Family
 
-This project was completed during my unit 4 contruct week with help of masai instructor Deborata Haldar Sir.
+# This project was completed during my unit 4 contruct week with help of masai instructor Deborata Haldar Sir.
+# HOMEPAGE
+![befit hero](https://user-images.githubusercontent.com/112638599/208607315-21d84fd8-cb20-42f4-9729-13f3243a73f7.jpg)
 
+# STORE
+![befit store](https://user-images.githubusercontent.com/112638599/208608327-587421e0-94b2-4b35-96b1-7ccd7ac39437.jpg)
 
 
 
