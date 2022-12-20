@@ -252,4 +252,20 @@ video {
   .card_type2_container > div {
     width: 95%;
   }
+  .bepass_container {
+    height: auto;
+    text-align: center;
+  }
+  .bepass_cards {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 85%;
+    margin: 5rem auto;
+  }
+  .bepass_cards > div {
+    width: 80%;
+    position: relative;
+    text-align: left;
+  }
 }
