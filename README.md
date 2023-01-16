@@ -1,9 +1,9 @@
 # BeFit.com
-# Be the Part of Be.Fit Family
+## Be the Part of Be.Fit Family
 
-## This project was completed during my unit 4 contruct week with help of masai instructor Deborata Haldar Sir.
+### This project was completed during my unit 4 contruct week with help of masai instructor Deborata Haldar Sir.
 
-## Be.Fit is Fitness Mentorship plateform along with fitness equipment and accessories that you can purchase form this plateform.
+### Be.Fit is Fitness Mentorship plateform along with fitness equipment and accessories that you can purchase form this plateform.
 # HOMEPAGE
 ![befit hero](https://user-images.githubusercontent.com/112638599/208607315-21d84fd8-cb20-42f4-9729-13f3243a73f7.jpg)
 
